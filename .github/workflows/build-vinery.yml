@@ -1,0 +1,96 @@
+name: Build Let's Do Vinery
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    name: Encrypt RP and build mcaddon
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Preserve source packs outside the workspace
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/bedrock-source"
+          cp -a "Let'sDoVineryBP" "$RUNNER_TEMP/bedrock-source/"
+          cp -a "Let'sDoVineryRP" "$RUNNER_TEMP/bedrock-source/"
+
+      - name: Validate encryption key
+        shell: bash
+        env:
+          BEDROCK_TEXTUREPACK_KEY: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
+        run: |
+          if [[ ! "$BEDROCK_TEXTUREPACK_KEY" =~ ^[A-Za-z0-9]{32}$ ]]; then
+            echo "Set repository secret BEDROCK_TEXTUREPACK_KEY to a 32-character alphanumeric key."
+            exit 1
+          fi
+
+      - name: Encrypt Vinery resource pack
+        uses: zelytra/bedrock-texturepack-encryption@184d6b70c18b749cc0f49a99cf5ef1dd30d16ebe
+        with:
+          private_key: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
+          texture_pack_path: ${{ runner.temp }}/bedrock-source/Let'sDoVineryRP
+          texture_pack_name: Let'sDoVineryRP
+          output_encoded_path: ${{ runner.temp }}/encoded
+
+      - name: Prepare addon staging directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$RUNNER_TEMP/encoded/Let'sDoVineryRP/manifest.json"
+          mkdir -p "$GITHUB_WORKSPACE/ma-LetsDoVinery/BP" "$GITHUB_WORKSPACE/ma-LetsDoVinery/RP"
+          cp -a "$RUNNER_TEMP/bedrock-source/Let'sDoVineryBP/." "$GITHUB_WORKSPACE/ma-LetsDoVinery/BP/"
+          cp -a "$RUNNER_TEMP/encoded/Let'sDoVineryRP/." "$GITHUB_WORKSPACE/ma-LetsDoVinery/RP/"
+
+      - name: Package .mcaddon
+        uses: Fabrimat/addon-packager-action@1f3c23b7443e9886d1cada725eeac54e9b734c57
+
+      - name: Create or reuse GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          for attempt in {1..10}; do
+            if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+              exit 0
+            fi
+            if gh release create "$RELEASE_TAG" --verify-tag --generate-notes --title "$RELEASE_TAG"; then
+              exit 0
+            fi
+            sleep "$attempt"
+          done
+          echo "Could not create or find GitHub Release $RELEASE_TAG" >&2
+          exit 1
+
+      - name: Upload .mcaddon to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: gh release upload "$RELEASE_TAG" LetsDoVinery.mcaddon --clobber
+
+      - name: Upload build artifact for non-release runs
+        if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: LetsDoVinery-mcaddon
+          path: LetsDoVinery.mcaddon
+          if-no-files-found: error
+          compression-level: 0
