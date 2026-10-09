@@ -3,14 +3,12 @@ name: Build Let's Do Snacks
 on:
   push:
     branches: [main]
-    paths:
-      - 'Let''sDoSnacksBP/**'
-      - 'Let''sDoSnacksRP/**'
-      - '.github/workflows/build-snacks.yml'
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   package:
@@ -58,7 +56,38 @@ jobs:
       - name: Package .mcaddon
         uses: Fabrimat/addon-packager-action@1f3c23b7443e9886d1cada725eeac54e9b734c57
 
-      - name: Upload .mcaddon artifact
+      - name: Create or reuse GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          for attempt in {1..10}; do
+            if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+              exit 0
+            fi
+            if gh release create "$RELEASE_TAG" --verify-tag --generate-notes --title "$RELEASE_TAG"; then
+              exit 0
+            fi
+            sleep "$attempt"
+          done
+          echo "Could not create or find GitHub Release $RELEASE_TAG" >&2
+          exit 1
+
+      - name: Upload .mcaddon to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: gh release upload "$RELEASE_TAG" LetsDoSnacks.mcaddon --clobber
+
+      - name: Upload build artifact for non-release runs
+        if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         uses: actions/upload-artifact@v4
         with:
           name: LetsDoSnacks-mcaddon
