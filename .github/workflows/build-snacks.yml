@@ -37,21 +37,22 @@ jobs:
           fi
 
       - name: Encrypt Snacks resource pack
-        uses: zelytra/bedrock-texturepack-encryption@184d6b70c18b749cc0f49a99cf5ef1dd30d16ebe
+        uses: ./.github/actions/encrypt-bedrock-pack
         with:
-          private_key: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
-          texture_pack_path: ${{ runner.temp }}/bedrock-source/Let'sDoSnacksRP
-          texture_pack_name: Let'sDoSnacksRP
-          output_encoded_path: ${{ runner.temp }}/encoded
+          pack-path: ${{ runner.temp }}/bedrock-source/Let'sDoSnacksRP
+          mcpack-output: ${{ runner.temp }}/encrypted/LetsDoSnacksRP.mcpack
+          key-file: ${{ runner.temp }}/keys/LetsDoSnacksRP.mcpack.key
+          encryption-key: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
 
-      - name: Prepare addon staging directory
+      - name: Package BP and stage addon
         shell: bash
         run: |
           set -euo pipefail
-          test -f "$RUNNER_TEMP/encoded/Let'sDoSnacksRP/manifest.json"
-          mkdir -p "$GITHUB_WORKSPACE/ma-LetsDoSnacks/BP" "$GITHUB_WORKSPACE/ma-LetsDoSnacks/RP"
-          cp -a "$RUNNER_TEMP/bedrock-source/Let'sDoSnacksBP/." "$GITHUB_WORKSPACE/ma-LetsDoSnacks/BP/"
-          cp -a "$RUNNER_TEMP/encoded/Let'sDoSnacksRP/." "$GITHUB_WORKSPACE/ma-LetsDoSnacks/RP/"
+          mkdir -p "$RUNNER_TEMP/encrypted" "$GITHUB_WORKSPACE/ma-LetsDoSnacks"
+          (cd "$RUNNER_TEMP/bedrock-source/Let'sDoSnacksBP" && zip -qr "$RUNNER_TEMP/encrypted/LetsDoSnacksBP.mcpack" .)
+          unzip -tq "$RUNNER_TEMP/encrypted/LetsDoSnacksRP.mcpack"
+          cp "$RUNNER_TEMP/encrypted/LetsDoSnacksBP.mcpack" "$GITHUB_WORKSPACE/ma-LetsDoSnacks/LetsDoSnacksBP.mcpack"
+          cp "$RUNNER_TEMP/encrypted/LetsDoSnacksRP.mcpack" "$GITHUB_WORKSPACE/ma-LetsDoSnacks/LetsDoSnacksRP.mcpack"
 
       - name: Package .mcaddon
         uses: Fabrimat/addon-packager-action@1f3c23b7443e9886d1cada725eeac54e9b734c57

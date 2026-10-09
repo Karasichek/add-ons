@@ -1,0 +1,48 @@
+name: Encrypt Bedrock resource pack
+description: Encrypt a resource pack into an mcpack using a pinned bedrock-pack-tools release.
+inputs:
+  pack-path:
+    description: Path to the resource pack directory containing manifest.json.
+    required: true
+  mcpack-output:
+    description: Destination path for the encrypted .mcpack.
+    required: true
+  key-file:
+    description: Temporary path for the generated sidecar key file.
+    required: true
+  encryption-key:
+    description: 32-character alphanumeric master key.
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Download and verify bedrock-pack-tools v3.9.0
+      shell: bash
+      run: |
+        set -euo pipefail
+        archive="$RUNNER_TEMP/bedrock-pack-tools-v3.9.0-linux-amd64.tar.gz"
+        tool_dir="$RUNNER_TEMP/bedrock-pack-tools"
+        curl -fsSL --retry 3 \
+          "https://github.com/iteplenky/bedrock-pack-tools/releases/download/v3.9.0/bedrock-pack-tools_linux_amd64.tar.gz" \
+          -o "$archive"
+        printf '%s  %s\n' '8aba02d20cb147d6310e8eff4b8bcddea830fffeaeb640d453474bd3b6ba10d9' "$archive" | sha256sum --check -
+        mkdir -p "$tool_dir"
+        tar -xzf "$archive" -C "$tool_dir"
+        chmod +x "$tool_dir/bedrock-pack-tools"
+        "$tool_dir/bedrock-pack-tools" version
+
+    - name: Encrypt resource pack to .mcpack
+      shell: bash
+      env:
+        PACK_PATH: ${{ inputs.pack-path }}
+        MCPACK_OUTPUT: ${{ inputs.mcpack-output }}
+        KEY_FILE: ${{ inputs.key-file }}
+        ENCRYPTION_KEY: ${{ inputs.encryption-key }}
+      run: |
+        set -euo pipefail
+        mkdir -p "$(dirname "$MCPACK_OUTPUT")" "$(dirname "$KEY_FILE")"
+        "$RUNNER_TEMP/bedrock-pack-tools/bedrock-pack-tools" encrypt \
+          --key-out "$KEY_FILE" \
+          "$PACK_PATH" \
+          "$ENCRYPTION_KEY" \
+          "$MCPACK_OUTPUT"
