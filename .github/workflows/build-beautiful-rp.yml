@@ -1,0 +1,64 @@
+name: Build Let's Do Beautiful resource pack
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Let''sDoBeautifulRP/**'
+      - '.github/workflows/build-beautiful-rp.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Encrypt RP and build mcpack
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Preserve source pack outside the workspace
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/bedrock-source"
+          cp -a "Let'sDoBeautifulRP" "$RUNNER_TEMP/bedrock-source/"
+
+      - name: Validate encryption key
+        shell: bash
+        env:
+          BEDROCK_TEXTUREPACK_KEY: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
+        run: |
+          if [[ ! "$BEDROCK_TEXTUREPACK_KEY" =~ ^[A-Za-z0-9]{32}$ ]]; then
+            echo "Set repository secret BEDROCK_TEXTUREPACK_KEY to a 32-character alphanumeric key."
+            exit 1
+          fi
+
+      - name: Encrypt Beautiful resource pack
+        uses: zelytra/bedrock-texturepack-encryption@184d6b70c18b749cc0f49a99cf5ef1dd30d16ebe
+        with:
+          private_key: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
+          texture_pack_path: ${{ runner.temp }}/bedrock-source/Let'sDoBeautifulRP
+          texture_pack_name: Let'sDoBeautifulRP
+          output_encoded_path: ${{ runner.temp }}/encoded
+
+      - name: Prepare resource pack staging directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$RUNNER_TEMP/encoded/Let'sDoBeautifulRP/manifest.json"
+          mkdir -p "$GITHUB_WORKSPACE/mp-LetsDoBeautiful"
+          cp -a "$RUNNER_TEMP/encoded/Let'sDoBeautifulRP/." "$GITHUB_WORKSPACE/mp-LetsDoBeautiful/"
+
+      - name: Package .mcpack
+        uses: Fabrimat/addon-packager-action@1f3c23b7443e9886d1cada725eeac54e9b734c57
+
+      - name: Upload .mcpack artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LetsDoBeautifulRP-mcpack
+          path: LetsDoBeautiful.mcpack
+          if-no-files-found: error
+          compression-level: 0

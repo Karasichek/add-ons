@@ -1,0 +1,67 @@
+name: Build Let's Do Drinky
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Let''sDoDrinkyBP/**'
+      - 'Let''sDoDrinkyRP/**'
+      - '.github/workflows/build-drinky.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Encrypt RP and build mcaddon
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Preserve source packs outside the workspace
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/bedrock-source"
+          cp -a "Let'sDoDrinkyBP" "$RUNNER_TEMP/bedrock-source/"
+          cp -a "Let'sDoDrinkyRP" "$RUNNER_TEMP/bedrock-source/"
+
+      - name: Validate encryption key
+        shell: bash
+        env:
+          BEDROCK_TEXTUREPACK_KEY: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
+        run: |
+          if [[ ! "$BEDROCK_TEXTUREPACK_KEY" =~ ^[A-Za-z0-9]{32}$ ]]; then
+            echo "Set repository secret BEDROCK_TEXTUREPACK_KEY to a 32-character alphanumeric key."
+            exit 1
+          fi
+
+      - name: Encrypt Drinky resource pack
+        uses: zelytra/bedrock-texturepack-encryption@184d6b70c18b749cc0f49a99cf5ef1dd30d16ebe
+        with:
+          private_key: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
+          texture_pack_path: ${{ runner.temp }}/bedrock-source/Let'sDoDrinkyRP
+          texture_pack_name: Let'sDoDrinkyRP
+          output_encoded_path: ${{ runner.temp }}/encoded
+
+      - name: Prepare addon staging directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$RUNNER_TEMP/encoded/Let'sDoDrinkyRP/manifest.json"
+          mkdir -p "$GITHUB_WORKSPACE/ma-LetsDoDrinky/BP" "$GITHUB_WORKSPACE/ma-LetsDoDrinky/RP"
+          cp -a "$RUNNER_TEMP/bedrock-source/Let'sDoDrinkyBP/." "$GITHUB_WORKSPACE/ma-LetsDoDrinky/BP/"
+          cp -a "$RUNNER_TEMP/encoded/Let'sDoDrinkyRP/." "$GITHUB_WORKSPACE/ma-LetsDoDrinky/RP/"
+
+      - name: Package .mcaddon
+        uses: Fabrimat/addon-packager-action@1f3c23b7443e9886d1cada725eeac54e9b734c57
+
+      - name: Upload .mcaddon artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LetsDoDrinky-mcaddon
+          path: LetsDoDrinky.mcaddon
+          if-no-files-found: error
+          compression-level: 0
