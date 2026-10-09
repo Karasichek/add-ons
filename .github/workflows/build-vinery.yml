@@ -37,21 +37,22 @@ jobs:
           fi
 
       - name: Encrypt Vinery resource pack
-        uses: zelytra/bedrock-texturepack-encryption@184d6b70c18b749cc0f49a99cf5ef1dd30d16ebe
+        uses: ./.github/actions/encrypt-bedrock-pack
         with:
-          private_key: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
-          texture_pack_path: ${{ runner.temp }}/bedrock-source/Let'sDoVineryRP
-          texture_pack_name: Let'sDoVineryRP
-          output_encoded_path: ${{ runner.temp }}/encoded
+          pack-path: ${{ runner.temp }}/bedrock-source/Let'sDoVineryRP
+          mcpack-output: ${{ runner.temp }}/encrypted/LetsDoVineryRP.mcpack
+          key-file: ${{ runner.temp }}/keys/LetsDoVineryRP.mcpack.key
+          encryption-key: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
 
-      - name: Prepare addon staging directory
+      - name: Package BP and stage addon
         shell: bash
         run: |
           set -euo pipefail
-          test -f "$RUNNER_TEMP/encoded/Let'sDoVineryRP/manifest.json"
-          mkdir -p "$GITHUB_WORKSPACE/ma-LetsDoVinery/BP" "$GITHUB_WORKSPACE/ma-LetsDoVinery/RP"
-          cp -a "$RUNNER_TEMP/bedrock-source/Let'sDoVineryBP/." "$GITHUB_WORKSPACE/ma-LetsDoVinery/BP/"
-          cp -a "$RUNNER_TEMP/encoded/Let'sDoVineryRP/." "$GITHUB_WORKSPACE/ma-LetsDoVinery/RP/"
+          mkdir -p "$RUNNER_TEMP/encrypted" "$GITHUB_WORKSPACE/ma-LetsDoVinery"
+          (cd "$RUNNER_TEMP/bedrock-source/Let'sDoVineryBP" && zip -qr "$RUNNER_TEMP/encrypted/LetsDoVineryBP.mcpack" .)
+          unzip -tq "$RUNNER_TEMP/encrypted/LetsDoVineryRP.mcpack"
+          cp "$RUNNER_TEMP/encrypted/LetsDoVineryBP.mcpack" "$GITHUB_WORKSPACE/ma-LetsDoVinery/LetsDoVineryBP.mcpack"
+          cp "$RUNNER_TEMP/encrypted/LetsDoVineryRP.mcpack" "$GITHUB_WORKSPACE/ma-LetsDoVinery/LetsDoVineryRP.mcpack"
 
       - name: Package .mcaddon
         uses: Fabrimat/addon-packager-action@1f3c23b7443e9886d1cada725eeac54e9b734c57

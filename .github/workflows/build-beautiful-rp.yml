@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   package:
-    name: Encrypt RP and build mcpack
+    name: Encrypt RP and build mcaddon
     runs-on: ubuntu-latest
     steps:
       - name: Check out source
@@ -36,22 +36,22 @@ jobs:
           fi
 
       - name: Encrypt Beautiful resource pack
-        uses: zelytra/bedrock-texturepack-encryption@184d6b70c18b749cc0f49a99cf5ef1dd30d16ebe
+        uses: ./.github/actions/encrypt-bedrock-pack
         with:
-          private_key: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
-          texture_pack_path: ${{ runner.temp }}/bedrock-source/Let'sDoBeautifulRP
-          texture_pack_name: Let'sDoBeautifulRP
-          output_encoded_path: ${{ runner.temp }}/encoded
+          pack-path: ${{ runner.temp }}/bedrock-source/Let'sDoBeautifulRP
+          mcpack-output: ${{ runner.temp }}/encrypted/LetsDoBeautifulRP.mcpack
+          key-file: ${{ runner.temp }}/keys/LetsDoBeautifulRP.mcpack.key
+          encryption-key: ${{ secrets.BEDROCK_TEXTUREPACK_KEY }}
 
-      - name: Prepare resource pack staging directory
+      - name: Stage encrypted resource pack in addon
         shell: bash
         run: |
           set -euo pipefail
-          test -f "$RUNNER_TEMP/encoded/Let'sDoBeautifulRP/manifest.json"
-          mkdir -p "$GITHUB_WORKSPACE/mp-LetsDoBeautiful"
-          cp -a "$RUNNER_TEMP/encoded/Let'sDoBeautifulRP/." "$GITHUB_WORKSPACE/mp-LetsDoBeautiful/"
+          mkdir -p "$GITHUB_WORKSPACE/ma-LetsDoBeautiful"
+          unzip -tq "$RUNNER_TEMP/encrypted/LetsDoBeautifulRP.mcpack"
+          cp "$RUNNER_TEMP/encrypted/LetsDoBeautifulRP.mcpack" "$GITHUB_WORKSPACE/ma-LetsDoBeautiful/LetsDoBeautifulRP.mcpack"
 
-      - name: Package .mcpack
+      - name: Package .mcaddon
         uses: Fabrimat/addon-packager-action@1f3c23b7443e9886d1cada725eeac54e9b734c57
 
       - name: Create or reuse GitHub Release
@@ -75,20 +75,20 @@ jobs:
           echo "Could not create or find GitHub Release $RELEASE_TAG" >&2
           exit 1
 
-      - name: Upload .mcpack to GitHub Release
+      - name: Upload .mcaddon to GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           RELEASE_TAG: ${{ github.ref_name }}
-        run: gh release upload "$RELEASE_TAG" LetsDoBeautiful.mcpack --clobber
+        run: gh release upload "$RELEASE_TAG" LetsDoBeautiful.mcaddon --clobber
 
       - name: Upload build artifact for non-release runs
         if: ${{ !startsWith(github.ref, 'refs/tags/v') }}
         uses: actions/upload-artifact@v4
         with:
-          name: LetsDoBeautifulRP-mcpack
-          path: LetsDoBeautiful.mcpack
+          name: LetsDoBeautiful-mcaddon
+          path: LetsDoBeautiful.mcaddon
           if-no-files-found: error
           compression-level: 0
