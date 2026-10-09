@@ -1,0 +1,46 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:item": {
+    "description": {
+      "identifier": "karasichek:chienese_kamelia",
+      "menu_category": {
+        "category": "items",
+        "group": "pa:itemGroup.name.tea"
+      }
+    },
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:max_stack_size": 64,
+      "minecraft:glint": false,
+      "minecraft:use_modifiers": {
+        "emit_vibrations": true,
+        "movement_modifier": 1.0,
+        "use_duration": 0.0
+      },
+      "minecraft:icon": "karasichek:chienese_kamelia",
+      "minecraft:allow_off_hand": false,
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:transform_materials",
+          "karasichek",
+          "is_tea"
+        ]
+      },
+      "minecraft:rarity": {
+        "value": "uncommon"
+      },
+      "minecraft:should_despawn": true,
+      "minecraft:cooldown": {
+        "category": "chienese_kamelia_cooldown",
+        "duration": 1.0,
+        "type": "attack"
+      },
+      "minecraft:fuel": {
+        "duration": 2
+      },
+      "minecraft:compostable": {
+        "composting_chance": 100
+      }
+    }
+  }
+}

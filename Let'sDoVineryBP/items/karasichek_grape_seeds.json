@@ -1,0 +1,37 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:item": {
+    "description": {
+      "identifier": "karasichek:grape_seeds",
+      "menu_category": {
+        "category": "nature",
+        "group": "pa:itemGroup.name.§dvinery"
+      }
+    },
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:max_stack_size": 64,
+      "minecraft:glint": false,
+      "minecraft:icon": "karasichek:grape_seeds",
+      "minecraft:allow_off_hand": false,
+      "minecraft:tags": {
+        "tags": [
+          "karasichek",
+          "minecraft:transform_materials"
+        ]
+      },
+      "minecraft:should_despawn": true,
+      "minecraft:cooldown": {
+        "category": "grape_seeds_red_cooldown",
+        "duration": 0.5,
+        "type": "use"
+      },
+      "minecraft:block_placer": {
+        "block": "karasichek:grape_crop_white_stage1",
+        "use_on": [
+          "farmland"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "melon_on_stick_7d4541ed"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " A ",
+      " B "
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:melon_slice",
+        "data": 0
+      },
+      "B": {
+        "item": "minecraft:stick",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:melon_on_stick",
+      "count": 1
+    }
+  }
+}

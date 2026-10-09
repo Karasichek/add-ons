@@ -1,0 +1,67 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "karasichek_grape_leaves_red": {
+      "textures": [
+        "textures/blocks/karasichek_grape_leaves_red"
+      ]
+    },
+    "karasichek_grape_leaves_white": {
+      "textures": [
+        "textures/blocks/karasichek_grape_leaves_white"
+      ]
+    },
+    "karasichek_grape_log_up": {
+      "textures": "textures/blocks/karasichek_grape_log_up"
+    },
+    "karasichek_grape_log_down": {
+      "textures": "textures/blocks/karasichek_grape_log_down"
+    },
+    "karasichek_vine_block_red": {
+      "textures": [
+        "textures/blocks/karasichek_vine_block_red"
+      ]
+    },
+    "karasichek_grape_log_side": {
+      "textures": "textures/blocks/karasichek_grape_log_side"
+    },
+    "karasichek_vine_block_white": {
+      "textures": [
+        "textures/blocks/karasichek_vine_block_white"
+      ]
+    },
+    "karasichek_grape_crop_red_regrowing": {
+      "textures": [
+        "textures/blocks/grape_bush/karasichek_growing_sticked"
+      ]
+    },
+    "karasichek_grape_crop_red_stage1": {
+      "textures": [
+        "textures/blocks/grape_bush/karasichek_growing"
+      ]
+    },
+    "karasichek_grape_crop_white_regrowing": {
+      "textures": [
+        "textures/blocks/grape_bush/karasichek_growing_sticked"
+      ]
+    },
+    "karasichek_grape_crop_white_stage1": {
+      "textures": [
+        "textures/blocks/grape_bush/karasichek_growing"
+      ]
+    },
+    "karasichek_grape_crop_white_stage2": {
+      "textures": [
+        "textures/blocks/grape_bush/karasichek_growed_white"
+      ]
+    },
+    "karasichek_grape_crop_red_stage2": {
+      "textures": [
+        "textures/blocks/grape_bush/karasichek_growed_red"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "karasichek:grape_leaves_red": {
+    "sound": "azalea_leaves"
+  },
+  "karasichek:grape_leaves_white": {
+    "sound": "azalea_leaves"
+  },
+  "karasichek:vine_block_red": {
+    "sound": "glass"
+  },
+  "karasichek:grape_log": {
+    "sound": "normal"
+  },
+  "karasichek:vine_block_white": {
+    "sound": "glass"
+  },
+  "format_version": [
+    1,
+    1,
+    0
+  ]
+}

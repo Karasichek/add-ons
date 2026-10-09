@@ -1,0 +1,60 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Adds a some of snacks and fun! by Karasichek",
+    "name": "Let's §cDo §6Snacks§f! [0.1.4]",
+    "uuid": "6ab13d6a-26ae-453b-8d1a-3741ea0dfc14",
+    "version": [
+      0,
+      1,
+      4
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      130
+    ]
+  },
+  "modules": [
+    {
+      "description": "Adds a some of snacks and fun! by Karasichek",
+      "type": "data",
+      "uuid": "2d2e948f-1ee9-4616-8f8a-3a7de44790d4",
+      "version": [
+        0,
+        1,
+        4
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "0cc2a35d-960a-40cd-bfe7-7db625e441a4",
+      "version": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "version": "2.7.0",
+      "module_name": "@minecraft/server"
+    },
+    {
+      "version": "2.0.0",
+      "module_name": "@minecraft/server-ui"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Karasichek"
+    ],
+    "generated_with": {
+      "MAM": [
+        "3.9.4"
+      ]
+    },
+    "product_type": "addon",
+    "url": "https://addonsmaker.com/"
+  }
+}

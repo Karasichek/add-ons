@@ -1,0 +1,8 @@
+{
+  "custom_sound.boil": {
+    "category": "neutral",
+    "sounds": [
+      "sounds/custom_sound/boil"
+    ]
+  }
+}

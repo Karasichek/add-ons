@@ -1,0 +1,39 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:item": {
+    "description": {
+      "identifier": "karasichek:oolong_tea",
+      "menu_category": {
+        "category": "items",
+        "group": "pa:itemGroup.name.tea"
+      }
+    },
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:max_stack_size": 1,
+      "minecraft:glint": false,
+      "minecraft:food": {
+        "saturation_modifier": 0.6,
+        "nutrition": 1,
+        "can_always_eat": true,
+        "using_converts_to": "karasichek:cup"
+      },
+      "minecraft:use_modifiers": {
+        "emit_vibrations": true,
+        "movement_modifier": 0.35,
+        "use_duration": 1.6
+      },
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:is_food",
+          "karasichek",
+          "is_tea"
+        ]
+      },
+      "minecraft:allow_off_hand": false,
+      "minecraft:use_animation": "drink",
+      "minecraft:icon": "karasichek:oolong_tea",
+      "karasichek_oolong_tea:trigger": {}
+    }
+  }
+}

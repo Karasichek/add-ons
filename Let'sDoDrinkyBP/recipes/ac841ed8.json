@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "kettle_a85e5641"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " A ",
+      "B B",
+      " BB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:copper_nugget",
+        "data": 0
+      },
+      "B": {
+        "item": "minecraft:copper_ingot",
+        "data": 0
+      }
+    },
+    "result": [
+      {
+        "item": "karasichek:kettle",
+        "count": 1
+      }
+    ]
+  }
+}

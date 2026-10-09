@@ -1,0 +1,115 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:block": {
+    "description": {
+      "identifier": "karasichek:kettle",
+      "menu_category": {
+        "category": "items"
+      },
+      "traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": [
+            "minecraft:cardinal_direction"
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/karasichek_kettle.json",
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.3
+      },
+      "minecraft:friction": 0.4,
+      "minecraft:map_color": "#7A4103",
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2.5
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 1,
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": true,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "karasichek_kettle",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "geometry.karasichek_kettle",
+      "minecraft:crafting_table": {
+        "grid_size": 3,
+        "crafting_tags": [
+          "karasichek_kettle"
+        ],
+        "table_name": "Kettle"
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "block_filter": [
+              "blast_furnace",
+              "furnace",
+              "smoker"
+            ],
+            "allowed_faces": [
+              "up"
+            ]
+          }
+        ]
+      },
+      "tag:metal": {},
+      "tag:water": {},
+      "karasichek_kettle:trigger": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              180,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              -90,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              90,
+              0
+            ]
+          }
+        }
+      }
+    ],
+    "events": {}
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Adds a vine making to game by Karasichek",
+    "name": "Let's §cDo §2Vine§f! [0.1.13]",
+    "uuid": "3a8d9f10-5c22-4a91-9f77-1c2b3d4e5f66",
+    "version": [
+      0,
+      1,
+      13
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      130
+    ]
+  },
+  "modules": [
+    {
+      "description": "Adds a vine making to game by Karasichek",
+      "type": "data",
+      "uuid": "7c11aa22-8b33-4d55-9e66-0f1122334455",
+      "version": [
+        0,
+        1,
+        13
+      ]
+    },
+    {
+      "type": "script",
+      "uuid": "2593b184-79e5-11f1-8a71-2747a3971231",
+      "version": [
+        0,
+        1,
+        13
+      ],
+      "language": "javascript",
+      "entry": "scripts/react.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "6f1c2a10-2c1b-4d3f-9c11-8a3f3a0f1a11",
+      "version": [
+        0,
+        1,
+        9
+      ]
+    },
+    {
+      "version": "beta",
+      "module_name": "@minecraft/server"
+    },
+    {
+      "version": "2.0.0",
+      "module_name": "@minecraft/server-ui"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Karasichek"
+    ],
+    "generated_with": {
+      "MAM": [
+        "3.9.4"
+      ]
+    },
+    "product_type": "addon",
+    "url": "https://t.me/karasichekMC/"
+  }
+}

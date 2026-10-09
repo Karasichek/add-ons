@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "tags": [
+      "campfire",
+      "soul_campfire"
+    ],
+    "output": {
+      "item": "karasichek:green_tea_hot",
+      "data": 0
+    },
+    "input": {
+      "item": "karasichek:green_tea_cold",
+      "data": 0
+    },
+    "description": {
+      "identifier": "recipes_155342b6"
+    }
+  }
+}

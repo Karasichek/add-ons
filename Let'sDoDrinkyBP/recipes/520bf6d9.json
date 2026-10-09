@@ -1,0 +1,39 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "green_tea_lemon_5a9f23dd"
+    },
+    "tags": [
+      "crafting_table",
+      "karasichek_kettle"
+    ],
+    "pattern": [
+      " A ",
+      "BC ",
+      " D "
+    ],
+    "key": {
+      "A": {
+        "item": "karasichek:lemon",
+        "data": 0
+      },
+      "B": {
+        "item": "minecraft:potion",
+        "data": 0
+      },
+      "C": {
+        "item": "karasichek:chienese_kamelia",
+        "data": 0
+      },
+      "D": {
+        "item": "karasichek:cup",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:green_tea_lemon",
+      "count": 1
+    }
+  }
+}

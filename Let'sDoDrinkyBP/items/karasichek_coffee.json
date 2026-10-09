@@ -1,0 +1,44 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:item": {
+    "description": {
+      "identifier": "karasichek:coffee",
+      "menu_category": {
+        "category": "items",
+        "group": "pa:itemGroup.name.tea"
+      }
+    },
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:max_stack_size": 1,
+      "minecraft:glint": false,
+      "minecraft:food": {
+        "saturation_modifier": 0.85,
+        "nutrition": 3,
+        "can_always_eat": true,
+        "using_converts_to": "karasichek:coffee_cup"
+      },
+      "minecraft:use_modifiers": {
+        "emit_vibrations": true,
+        "movement_modifier": 0.35,
+        "use_duration": 1.6
+      },
+      "minecraft:tags": {
+        "tags": [
+          "is_tea",
+          "karasichek",
+          "minecraft:is_food"
+        ]
+      },
+      "minecraft:cooldown": {
+        "category": "coffee_cooldown",
+        "duration": 1.0,
+        "type": "use"
+      },
+      "minecraft:allow_off_hand": false,
+      "minecraft:use_animation": "drink",
+      "minecraft:icon": "karasichek:coffee",
+      "karasichek_coffee:trigger": {}
+    }
+  }
+}

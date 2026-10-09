@@ -1,0 +1,40 @@
+{
+  "karasichek:coffee_crop": {
+    "sound": "azalea_leaves"
+  },
+  "karasichek:kettle": {
+    "sound": "chain"
+  },
+	"karasichek:coffee_placed_2": {
+		"sound": "stone"
+	},
+  "karasichek:kamelia_crop": {
+    "sound": "azalea_leaves"
+  },
+  "karasichek:lemon_leaves": {
+    "sound": "azalea_leaves"
+  },
+  "karasichek:lemon_llog": {
+    "sound": "wood"
+  },
+  "karasichek:lavender_crop": {
+    "sound": "azalea_leaves"
+  },
+  "karasichek:lemon_sapling": {
+    "sound": "bamboo_sapling"
+  },
+  "karasichek:lemon_log": {
+    "sound": "wood"
+  },
+  "karasichek:lemon_planks": {
+    "sound": "wood"
+  },
+  "karasichek:tea_bag_block": {
+    "sound": "cloth"
+  },
+  "format_version": [
+    1,
+    1,
+    0
+  ]
+}

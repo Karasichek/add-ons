@@ -1,0 +1,47 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Adds a tons of tea, coffee, ana fun! by Karasichek",
+    "name": "Let's §cDo §aDrinky! §f[0.6.7]",
+    "uuid": "1fa9763c-9524-489f-873c-c2a4a8e0db4a",
+    "version": [
+      0,
+      6,
+      7
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      20
+    ]
+  },
+  "modules": [
+    {
+      "description": "Adds a tons of tea, coffee, ana fun! by Karasichek",
+      "type": "resources",
+      "uuid": "595c798d-3c24-4051-a9fb-bea0287f68d7",
+      "version": [
+        0,
+        6,
+        6
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "dc7b2887-ae01-4a66-bcca-cc8ab65a138e",
+      "version": [
+        0,
+        6,
+        6
+      ]
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Karasichek"
+    ],
+    "product_type": "addon",
+    "url": "https://t.me/@karasichekMC"
+  }
+}

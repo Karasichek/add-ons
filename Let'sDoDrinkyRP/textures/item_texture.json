@@ -1,0 +1,90 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "karasichek:bocal_empty": {
+      "textures": "textures/items/karasichek_bocal_empty"
+    },
+    "karasichek:chienese_kamelia": {
+      "textures": "textures/items/karasichek_chienese_kamelia"
+    },
+    "karasichek:clay_cup": {
+      "textures": "textures/items/karasichek_clay_cup"
+    },
+    "karasichek:coffee": {
+      "textures": "textures/items/karasichek_coffee"
+    },
+    "karasichek:coffee_beans": {
+      "textures": "textures/items/karasichek_coffee_beans"
+    },
+    "karasichek_coffee_crop": {
+      "textures": "textures/items/karasichek_coffee_crop"
+    },
+    "karasichek:coffee_cup": {
+      "textures": "textures/items/karasichek_coffee_cup"
+    },
+    "karasichek:coffee_latte": {
+      "textures": "textures/items/karasichek_coffee_latte"
+    },
+    "karasichek:coffee_mokko": {
+      "textures": "textures/items/karasichek_coffee_mokko"
+    },
+    "karasichek:cup": {
+      "textures": "textures/items/karasichek_cup"
+    },
+    "karasichek:glowberry_custard": {
+      "textures": "textures/items/karasichek_glowberry_custard"
+    },
+    "karasichek:green_tea_cold": {
+      "textures": "textures/items/karasichek_green_tea_cold"
+    },
+    "karasichek:green_tea_hot": {
+      "textures": "textures/items/karasichek_green_tea_hot"
+    },
+    "karasichek:green_tea_lemon": {
+      "textures": "textures/items/karasichek_green_tea_lemon"
+    },
+    "karasichek_kamelia_crop": {
+      "textures": "textures/items/karasichek_kamelia_crop"
+    },
+    "karasichek:lavender": {
+      "textures": "textures/items/karasichek_lavender"
+    },
+    "karasichek_lavender_crop": {
+      "textures": "textures/items/karasichek_lavender_crop"
+    },
+    "karasichek:lavender_te_cold": {
+      "textures": "textures/items/karasichek_lavender_te_cold"
+    },
+    "karasichek:lemon": {
+      "textures": "textures/items/karasichek_lemon"
+    },
+    "karasichek_lemon_sapling": {
+      "textures": "textures/blocks/karasichek_lemon_sapling"
+    },
+    "karasichek:lime": {
+      "textures": "textures/items/karasichek_lime"
+    },
+    "karasichek:matcha_tea": {
+      "textures": "textures/items/karasichek_matcha_tea"
+    },
+    "karasichek:oolong": {
+      "textures": "textures/items/karasichek_oolong"
+    },
+    "karasichek:oolong_tea": {
+      "textures": "textures/items/karasichek_oolong_tea"
+    },
+    "karasichek:tea_black_cold": {
+      "textures": "textures/items/karasichek_tea_black_cold"
+    },
+    "karasichek:tea_black_hot": {
+      "textures": "textures/items/karasichek_tea_black_hot"
+    },
+    "karasichek:tea_black_lemon": {
+      "textures": "textures/items/karasichek_tea_black_lemon"
+    },
+    "karasichek:tea_leaves": {
+      "textures": "textures/items/karasichek_tea_leaves"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "tags": [
+      "furnace"
+    ],
+    "output": {
+      "item": "karasichek:tea_leaves",
+      "data": 0
+    },
+    "input": {
+      "item": "karasichek:chienese_kamelia",
+      "data": 0
+    },
+    "description": {
+      "identifier": "recipes_d4b7dfef"
+    },
+    "unlock": [
+      {
+        "item": "karasichek:chienese_kamelia"
+      }
+    ]
+  }
+}

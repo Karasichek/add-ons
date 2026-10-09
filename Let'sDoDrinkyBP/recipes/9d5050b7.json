@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "tea_black_cold_bf33b70d"
+    },
+    "tags": [
+      "karasichek_kettle"
+    ],
+    "pattern": [
+      "   ",
+      " A ",
+      " B "
+    ],
+    "key": {
+      "A": {
+        "item": "karasichek:tea_leaves",
+        "data": 0
+      },
+      "B": {
+        "item": "karasichek:cup",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:tea_black_cold",
+      "count": 1
+    }
+  }
+}

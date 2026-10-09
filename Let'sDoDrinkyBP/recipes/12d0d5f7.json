@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "tags": [
+      "smoker"
+    ],
+    "output": {
+      "item": "karasichek:tea_leaves",
+      "data": 0
+    },
+    "input": {
+      "item": "karasichek:chienese_kamelia",
+      "data": 0
+    },
+    "description": {
+      "identifier": "recipes_d40a21d6"
+    }
+  }
+}

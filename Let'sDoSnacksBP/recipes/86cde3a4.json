@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "bread_9aace932"
+    },
+    "tags": [
+      "furnace"
+    ],
+    "input": {
+      "item": "karasichek:patch_bread",
+      "data": 0
+    },
+    "output": {
+      "item": "minecraft:bread",
+      "data": 0
+    }
+  }
+}

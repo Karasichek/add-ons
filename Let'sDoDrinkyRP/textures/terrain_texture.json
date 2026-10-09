@@ -1,0 +1,103 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 2
+  "texture_data": {
+    "karasichek_coffee_crop_stage_0": {
+      "textures": [
+        "textures/blocks/karasichek_coffee_crop_stage_0"
+      ]
+    },
+    "karasichek_coffee_crop_stage_1": {
+      "textures": [
+        "textures/blocks/karasichek_coffee_crop_stage_1"
+      ]
+    },
+    "karasichek_coffee_crop_stage_2": {
+      "textures": [
+        "textures/blocks/karasichek_coffee_crop_stage_2"
+      ]
+    },
+    "karasichek_kettle": {
+      "textures": [
+        "textures/blocks/karasichek_kettle"
+      ]
+    },
+    "karasichek_kamelia_crop_stage_0": {
+      "textures": [
+        "textures/blocks/karasichek_kamelia_crop_stage_0"
+      ]
+    },
+    "karasichek_kamelia_crop_stage_1": {
+      "textures": [
+        "textures/blocks/karasichek_kamelia_crop_stage_1"
+      ]
+    },
+    "karasichek_kamelia_crop_stage_2": {
+      "textures": [
+        "textures/blocks/karasichek_kamelia_crop_stage_2"
+      ]
+    },
+    "karasichek_lemon_leaves": {
+      "textures": [
+        "textures/blocks/karasichek_lemon_leaves"
+      ]
+    },
+    "karasichek_lemon_llog": {
+      "textures": [
+        "textures/blocks/karasichek_lemon_llog"
+      ]
+    },
+    "karasichek_lavender_crop_stage_0": {
+      "textures": [
+        "textures/blocks/karasichek_lavender_crop_stage_0"
+      ]
+    },
+    "karasichek_lavender_crop_stage_1": {
+      "textures": [
+        "textures/blocks/karasichek_lavender_crop_stage_1"
+      ]
+    },
+    "karasichek_lemon_log_up": {
+      "textures": "textures/blocks/karasichek_lemon_log_up"
+    },
+    "karasichek_lemon_log_down": {
+      "textures": "textures/blocks/karasichek_lemon_log_down"
+    },
+    "karasichek_lemon_planks": {
+      "textures": [
+        "textures/blocks/karasichek_lemon_planks"
+      ]
+    },
+    "karasichek_lemon_sapling": {
+      "textures": [
+        "textures/blocks/karasichek_lemon_sapling"
+      ]
+    },
+    "karasichek_lemon_log_side": {
+      "textures": "textures/blocks/karasichek_lemon_log_side"
+    },
+    "karasichek_tea_bag_block_up": {
+      "textures": "textures/blocks/karasichek_tea_bag_block_up"
+    },
+    "karasichek_tea_bag_block_down": {
+      "textures": "textures/blocks/karasichek_tea_bag_block_down"
+    },
+    "karasichek_tea_bag_block_north": {
+      "textures": "textures/blocks/karasichek_tea_bag_block_north"
+    },
+    "karasichek_tea_bag_block_south": {
+      "textures": "textures/blocks/karasichek_tea_bag_block_south"
+    },
+    "karasichek_tea_bag_block_east": {
+      "textures": "textures/blocks/karasichek_tea_bag_block_east"
+    },
+	  	"coffee_placed_2": {
+			"textures": "textures/blocks/coffee_placed_2"
+	  	},
+    "karasichek_tea_bag_block_west": {
+      "textures": "textures/blocks/karasichek_tea_bag_block_west"
+    }
+  }
+}

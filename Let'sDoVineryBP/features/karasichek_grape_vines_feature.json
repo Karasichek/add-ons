@@ -1,0 +1,11 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:feature": {
+    "description": {
+      "identifier": "karasichek:grape_vines_feature"
+    },
+    "places_feature": {
+      "feature": "karasichek:grape_vine_random_selector"
+    }
+  }
+}

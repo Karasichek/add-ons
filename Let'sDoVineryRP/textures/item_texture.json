@@ -1,0 +1,33 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "karasichek:bocal_empty": {
+      "textures": "textures/items/pamobile/karasichek_bocal_empty"
+    },
+    "karasichek:grape": {
+      "textures": "textures/items/pamobile/karasichek_grape"
+    },
+    "karasichek:grape_red": {
+      "textures": "textures/items/pamobile/karasichek_grape_red"
+    },
+    "karasichek:grape_seeds": {
+      "textures": "textures/items/pamobile/karasichek_grape_seeds"
+    },
+    "karasichek:grape_seeds_red": {
+      "textures": "textures/items/pamobile/karasichek_grape_seeds_red"
+    },
+    "karasichek:red_vine_bocal": {
+      "textures": "textures/items/pamobile/karasichek_red_vine_bocal"
+    },
+    "karasichek:vine_bottle": {
+      "textures": "textures/items/pamobile/karasichek_vine_bottle"
+    },
+    "karasichek:vine_bottle_red": {
+      "textures": "textures/items/pamobile/karasichek_vine_bottle_red"
+    },
+    "karasichek:white_vine_bocal": {
+      "textures": "textures/items/pamobile/karasichek_white_vine_bocal"
+    }
+  }
+}

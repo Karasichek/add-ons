@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:random_selector": {
+    "description": {
+      "identifier": "karasichek:grape_vine_random_selector"
+    },
+    "features": [
+      {
+        "chance": 0.5,
+        "feature": "karasichek:grape_vine_generate_white_growing_plant"
+      },
+      {
+        "chance": 0.5,
+        "feature": "karasichek:grape_vine_generate_red_growing_plant"
+      }
+    ]
+  }
+}

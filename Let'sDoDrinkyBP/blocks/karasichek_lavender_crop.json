@@ -1,0 +1,126 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:block": {
+    "description": {
+      "identifier": "karasichek:lavender_crop",
+      "menu_category": {
+        "category": "none"
+      },
+      "states": {
+        "pa:growth": {
+          "values": {
+            "min": 0,
+            "max": 1
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:flammable": {
+        "catch_chance_modifier": 5,
+        "destroy_chance_modifier": 20
+      },
+      "minecraft:collision_box": false,
+      "minecraft:light_dampening": 0,
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.0
+      },
+      "minecraft:geometry": "geometry.karasichek_lavender_crop",
+      "minecraft:loot": "loot_tables/empty.json",
+      "minecraft:map_color": "#9F2155",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "karasichek_lavender_crop_stage_0",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:tick": {
+        "interval_range": [600, 1200],
+        "looping": true
+      },
+      "karasichek:snow_prevention": {},
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "none"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": false,
+            "on_liquid_touches": "popped",
+            "use_liquid_clipping": false
+          }
+        ]
+      },
+      "minecraft:movable": {
+        "movement_type": "popped",
+        "sticky": "none"
+      },
+      "minecraft:connection_rule": {
+        "accepts_connections_from": "none"
+      },
+      "minecraft:friction": 0.4,
+      "minecraft:light_emission": 0,
+      "item:crop": {
+        "max_growth": 1,
+        "bone_meal_boost": [
+          1,
+          2
+        ]
+      },
+      "minecraft:selection_box": {
+        "origin": [
+          -8.0,
+          0.0,
+          -8.0
+        ],
+        "size": [
+          16.0,
+          16.0,
+          16.0
+        ]
+      },
+      "tag:wood": {},
+      "karasichek_lavender_crop:trigger": {}
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('pa:growth') < 0",
+        "components": {
+          "minecraft:loot": "loot_tables/blocks/karasichek_lavender_crop.json"
+        }
+      },
+      {
+        "condition": "q.block_state('pa:growth') == 0",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "karasichek_lavender_crop_stage_0",
+              "render_method": "alpha_test",
+              "ambient_occlusion": false,
+              "face_dimming": false
+            }
+          },
+          "minecraft:loot": "loot_tables/blocks/karasichek_lavender_crop_stage_0.json"
+        }
+      },
+      {
+        "condition": "q.block_state('pa:growth') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "karasichek_lavender_crop_stage_1",
+              "render_method": "alpha_test",
+              "ambient_occlusion": false,
+              "face_dimming": false
+            }
+          },
+          "minecraft:loot": "loot_tables/blocks/karasichek_lavender_crop_stage_1.json"
+        }
+      }
+    ],
+    "events": {}
+  }
+}

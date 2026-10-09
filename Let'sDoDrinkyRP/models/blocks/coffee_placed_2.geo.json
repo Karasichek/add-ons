@@ -1,0 +1,55 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.coffee_placed_2",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "cup",
+					"pivot": [0.5, -1, 0.5],
+					"cubes": [
+						{
+							"origin": [-2, -1, -2],
+							"size": [5, 1, 5],
+							"uv": {
+								"north": {"uv": [11, 0], "uv_size": [5, 1]},
+								"east": {"uv": [11, 1], "uv_size": [5, 1]},
+								"south": {"uv": [11, 2], "uv_size": [5, 1]},
+								"west": {"uv": [11, 3], "uv_size": [5, 1]},
+								"up": {"uv": [5, 5], "uv_size": [-5, -5]},
+								"down": {"uv": [5, 10], "uv_size": [-5, -5]}
+							}
+						},
+						{
+							"origin": [-1, 0, -1],
+							"size": [3, 4, 3],
+							"uv": {
+								"north": {"uv": [5, 0], "uv_size": [3, 4]},
+								"east": {"uv": [5, 4], "uv_size": [3, 4]},
+								"south": {"uv": [8, 0], "uv_size": [3, 4]},
+								"west": {"uv": [8, 4], "uv_size": [3, 4]},
+								"up": {"uv": [8, 11], "uv_size": [-3, -3]},
+								"down": {"uv": [11, 11], "uv_size": [-3, -3]}
+							}
+						},
+						{
+							"origin": [-3, 0, 0.5],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 10], "uv_size": [2, 3]},
+								"south": {"uv": [2, 10], "uv_size": [2, 3]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

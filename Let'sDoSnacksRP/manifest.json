@@ -1,0 +1,52 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Adds a some of snacks and fun! by Karasichek",
+    "name": "Let's §cDo §6Snacks§f! [0.1.4]",
+    "uuid": "0cc2a35d-960a-40cd-bfe7-7db625e441a4",
+    "version": [
+      0,
+      1,
+      4
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      130
+    ]
+  },
+  "modules": [
+    {
+      "description": "Adds a some of snacks and fun! by Karasichek",
+      "type": "resources",
+      "uuid": "559b853a-e44d-48b7-a885-ac8f4ae47337",
+      "version": [
+        0,
+        1,
+        4
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "6ab13d6a-26ae-453b-8d1a-3741ea0dfc14",
+      "version": [
+        0,
+        1,
+        4
+      ]
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Karasichek"
+    ],
+    "generated_with": {
+      "MAM": [
+        "3.9.4"
+      ]
+    },
+    "product_type": "addon",
+    "url": "https://addonsmaker.com/"
+  }
+}

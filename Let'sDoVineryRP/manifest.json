@@ -1,0 +1,32 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Adds a vine making to game by Karasichek",
+    "name": "Let's §cDo §2Vine§f! [0.1.9]",
+    "uuid": "6f1c2a10-2c1b-4d3f-9c11-8a3f3a0f1a11",
+    "version": [0, 1, 9],
+    "min_engine_version": [1, 21, 130]
+  },
+  "modules": [
+    {
+      "description": "Adds a vine making to game by Karasichek",
+      "type": "resources",
+      "uuid": "9b2f1c44-7c12-4f3d-8b12-2a9c1d0e7a55",
+      "version": [0, 1, 9]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "3a8d9f10-5c22-4a91-9f77-1c2b3d4e5f66",
+      "version": [0, 1, 9]
+    }
+  ],
+  "metadata": {
+    "authors": ["Karasichek"],
+    "generated_with": {
+      "MAM": ["3.9.4"]
+    },
+    "product_type": "addon",
+    "url": "https://addonsmaker.com/"
+  }
+}

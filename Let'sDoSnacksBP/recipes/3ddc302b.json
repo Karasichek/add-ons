@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "pumpkin_pie_e41c621a"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " A ",
+      " B ",
+      " C "
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:sugar",
+        "data": 0
+      },
+      "B": {
+        "item": "karasichek:pumpkin_slice",
+        "data": 0
+      },
+      "C": {
+        "item": "karasichek:patch_bread",
+        "data": 0
+      }
+    },
+    "result": [
+      {
+        "item": "minecraft:pumpkin_pie",
+        "count": 1
+      }
+    ]
+  }
+}

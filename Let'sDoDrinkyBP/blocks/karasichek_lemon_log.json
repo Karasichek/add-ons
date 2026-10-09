@@ -1,0 +1,52 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:block": {
+    "description": {
+      "identifier": "karasichek:lemon_log",
+      "menu_category": {
+        "category": "nature",
+        "group": "pa:itemGroup.name.lemon"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3.0
+      },
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": {
+        "catch_chance_modifier": 5,
+        "destroy_chance_modifier": 20
+      },
+      "minecraft:map_color": "#793D23",
+      "minecraft:light_dampening": 4,
+      "minecraft:light_emission": 0,
+      "minecraft:loot": "loot_tables/blocks/karasichek_lemon_log.json",
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": true,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "karasichek_lemon_log_side",
+          "render_method": "opaque"
+        },
+        "up": {
+          "texture": "karasichek_lemon_log_up",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "karasichek_lemon_log_down",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:movable": {
+        "movement_type": "push_pull",
+        "sticky": "none"
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "tag:wood": {}
+    },
+    "events": {}
+  }
+}

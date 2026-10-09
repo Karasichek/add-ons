@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "fried_eggs_8b68f759"
+    },
+    "tags": [
+      "furnace"
+    ],
+    "input": {
+      "item": "karasichek:patch_eggs",
+      "data": 0
+    },
+    "output": {
+      "item": "karasichek:fried_eggs",
+      "data": 0
+    }
+  }
+}

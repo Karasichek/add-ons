@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "lemon_planks_71dc5a55"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      " A "
+    ],
+    "key": {
+      "A": {
+        "item": "karasichek:lemon_log",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:lemon_planks",
+      "count": 4
+    }
+  }
+}

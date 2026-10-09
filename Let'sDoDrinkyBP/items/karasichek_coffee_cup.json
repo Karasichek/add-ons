@@ -1,0 +1,37 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:item": {
+    "description": {
+      "identifier": "karasichek:coffee_cup",
+      "menu_category": {
+        "category": "items",
+        "group": "pa:itemGroup.name.tea"
+      }
+    },
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:max_stack_size": 1,
+      "minecraft:glint": false,
+      "minecraft:use_modifiers": {
+        "emit_vibrations": true,
+        "movement_modifier": 1.0,
+        "use_duration": 0.0
+      },
+      "minecraft:icon": "karasichek:coffee_cup",
+      "minecraft:allow_off_hand": false,
+      "minecraft:tags": {
+        "tags": [
+          "is_tea",
+          "karasichek",
+          "minecraft:transform_materials"
+        ]
+      },
+      "minecraft:should_despawn": false,
+      "minecraft:cooldown": {
+        "category": "coffee_cup_cooldown",
+        "duration": 0.5,
+        "type": "attack"
+      }
+    }
+  }
+}

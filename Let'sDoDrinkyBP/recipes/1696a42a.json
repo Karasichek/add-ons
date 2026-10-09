@@ -1,0 +1,40 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "tea_black_lemon_d16bfd74"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " A ",
+      "BC ",
+      " D "
+    ],
+    "key": {
+      "A": {
+        "item": "karasichek:lemon",
+        "data": 0
+      },
+      "B": {
+        "item": "minecraft:potion",
+        "data": 0
+      },
+      "C": {
+        "item": "karasichek:tea_leaves",
+        "data": 0
+      },
+      "D": {
+        "item": "karasichek:cup",
+        "data": 0
+      }
+    },
+    "result": [
+      {
+        "item": "karasichek:tea_black_lemon",
+        "count": 1
+      }
+    ]
+  }
+}

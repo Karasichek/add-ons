@@ -1,0 +1,25 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "karasichek:coffee_crop_scatter_feature"
+    },
+    "places_feature": "karasichek:coffee_crop_features",
+    "iterations": 6,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [
+        0,
+        15
+      ]
+    },
+    "y": 0,
+    "z": {
+      "distribution": "gaussian",
+      "extent": [
+        0,
+        15
+      ]
+    }
+  }
+}

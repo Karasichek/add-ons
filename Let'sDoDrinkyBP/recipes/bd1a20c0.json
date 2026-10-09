@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "green_tea_cold_452e5cc4"
+    },
+    "tags": [
+      "karasichek_kettle"
+    ],
+    "pattern": [
+      "   ",
+      " A ",
+      " B "
+    ],
+    "key": {
+      "A": {
+        "item": "karasichek:chienese_kamelia",
+        "data": 0
+      },
+      "B": {
+        "item": "karasichek:cup",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:green_tea_cold",
+      "count": 1
+    }
+  }
+}

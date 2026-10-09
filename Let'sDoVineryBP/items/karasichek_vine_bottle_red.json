@@ -1,0 +1,42 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:item": {
+    "description": {
+      "identifier": "karasichek:vine_bottle_red",
+      "menu_category": {
+        "category": "nature",
+        "group": "pa:itemGroup.name.§dvinery"
+      }
+    },
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:max_stack_size": 64,
+      "minecraft:glint": false,
+      "minecraft:use_modifiers": {
+        "emit_vibrations": true,
+        "movement_modifier": 1.0,
+        "use_duration": 0.0
+      },
+      "minecraft:icon": "karasichek:vine_bottle_red",
+      "minecraft:allow_off_hand": false,
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:transform_materials"
+        ]
+      },
+      "minecraft:fire_resistant": {
+        "value": true
+      },
+      "minecraft:should_despawn": true,
+      "minecraft:cooldown": {
+        "category": "vine_bottle_red_cooldown",
+        "duration": 0.5,
+        "type": "use"
+      },
+      "minecraft:block_placer": {
+        "block": "karasichek:vine_block_red",
+        "use_on": []
+      }
+    }
+  }
+}

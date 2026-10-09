@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "oolong_2f922512"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      " A ",
+      " B "
+    ],
+    "key": {
+      "A": {
+        "item": "karasichek:tea_leaves",
+        "data": 0
+      },
+      "B": {
+        "item": "karasichek:chienese_kamelia",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:oolong",
+      "count": 1
+    }
+  }
+}

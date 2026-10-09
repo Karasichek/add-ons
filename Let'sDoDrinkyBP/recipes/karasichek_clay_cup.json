@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "clay_cup_ca233a12"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      "A A",
+      " AA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:clay_ball",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:clay_cup",
+      "count": 1
+    }
+  }
+}

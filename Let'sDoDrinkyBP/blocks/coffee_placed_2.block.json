@@ -1,0 +1,36 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "karasichek:coffee_placed_2",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"origin": [-8, 0, -8],
+				"size": [16, 8, 16]
+			},
+			"minecraft:selection_box": {
+				"origin": [-8, 0, -8],
+				"size": [16, 8, 16]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.65
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 0.5
+			},
+			"minecraft:geometry": "geometry.coffee_placed_2",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "coffee_placed_2",
+					"render_method": "alpha_test_to_opaque",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:map_color": "#5f4a2b"
+		}
+	}
+}

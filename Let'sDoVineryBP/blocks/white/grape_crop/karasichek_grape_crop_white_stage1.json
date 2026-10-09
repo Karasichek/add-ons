@@ -1,0 +1,60 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:block": {
+    "description": {
+      "identifier": "karasichek:grape_crop_white_stage1"
+    },
+    "components": {
+      "minecraft:geometry": "geometry.crop.cross",
+      "karasichek:grape_crop_white_stage1_comp":{},
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "karasichek_grape_crop_white_stage1",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"],
+            "block_filter": ["farmland", "dirt", "podzol", "mud"]
+          }
+        ]
+      },
+      "minecraft:selection_box": {
+        "origin": [-8.0, 0.0, -8.0],
+        "size": [16.0, 16.0, 16.0]
+      },
+      "minecraft:collision_box": false,
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": true,
+            "liquid_type": "water",
+            "on_liquid_touches": "popped"
+          }
+        ]
+      },
+      "minecraft:loot": "loot_tables/blocks/karasichek_grape_crop_white_stage1.json",
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.0
+      },
+      "minecraft:friction": 0.4,
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:light_dampening": 5,
+      "minecraft:light_emission": 0,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.0
+      },
+      "tag:crop": {},
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "none"
+      },
+      "minecraft:tick": {
+        "interval_range": [40, 40],
+        "looping": true
+      },
+      "karasichek:snow_prevention": {}
+    }
+  }
+}

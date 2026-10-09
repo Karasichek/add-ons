@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "vine_bottle_6fd664d4"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      "AB "
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:sugar",
+        "data": 0
+      },
+      "B": {
+        "item": "karasichek:grape",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:vine_bottle",
+      "count": 1
+    }
+  }
+}

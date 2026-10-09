@@ -1,0 +1,38 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "karasichek:lavender_crop_features"
+    },
+    "places_block": "karasichek:lavender_crop",
+    "enforce_placement_rules": true,
+    "enforce_survivability_rules": true,
+    "may_attach_to": {
+      "bottom": [
+        "minecraft:dirt",
+        "minecraft:grass_block",
+        "minecraft:podzol",
+        "minecraft:farmland",
+        "minecraft:dirt_with_roots",
+        "minecraft:moss_block",
+        "minecraft:clay",
+        "minecraft:mycelium",
+        "minecraft:mud"
+      ],
+      "sides": [
+        "minecraft:dirt",
+        "minecraft:grass_block",
+        "minecraft:moss_carpet",
+        "minecraft:double_plant"
+      ],
+      "min_sides_must_attach": 1
+    },
+
+    "may_replace": [
+      "minecraft:moss_carpet",
+      "minecraft:grass_block",
+      "minecraft:air",
+      "minecraft:double_plant"
+    ]
+  }
+}

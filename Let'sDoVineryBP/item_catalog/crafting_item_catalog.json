@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:crafting_items_catalog": {
+    "categories": [
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "karasichek:grape",
+              "name": "pa:itemGroup.name.§dvinery"
+            },
+            "items": [
+              "karasichek:grape",
+              "karasichek:grape_leaves_red",
+              "karasichek:grape_leaves_white",
+              "karasichek:grape_log",
+              "karasichek:grape_red",
+              "karasichek:grape_seeds",
+              "karasichek:grape_seeds_red",
+              "karasichek:red_vine_bocal",
+              "karasichek:vine_block_red",
+              "karasichek:vine_block_white",
+              "karasichek:vine_bottle",
+              "karasichek:vine_bottle_red",
+              "karasichek:white_vine_bocal"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:item": {
+    "description": {
+      "identifier": "karasichek:clay_cup",
+      "menu_category": {
+        "category": "items",
+        "group": "pa:itemGroup.name.tea"
+      }
+    },
+    "components": {
+      "minecraft:hand_equipped": false,
+      "minecraft:max_stack_size": 64,
+      "minecraft:glint": false,
+      "minecraft:use_modifiers": {
+        "emit_vibrations": true,
+        "movement_modifier": 1.0,
+        "use_duration": 0.0
+      },
+      "minecraft:icon": "karasichek:clay_cup",
+      "minecraft:allow_off_hand": false,
+      "minecraft:tags": {
+        "tags": [
+          "karasichek",
+          "minecraft:transform_materials"
+        ]
+      },
+      "minecraft:should_despawn": false,
+      "minecraft:cooldown": {
+        "category": "clay_cup_cooldown",
+        "duration": 0.5,
+        "type": "attack"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "tea_bag_block_82a1c6fe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " A ",
+      "BAB",
+      " B "
+    ],
+    "key": {
+      "A": {
+        "item": "karasichek:chienese_kamelia",
+        "data": 0
+      },
+      "B": {
+        "item": "minecraft:leather",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:tea_bag_block",
+      "count": 1
+    }
+  }
+}

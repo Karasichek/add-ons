@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "raw_bread_a76aa588"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:wheat",
+        "data": 0
+      },
+      {
+        "item": "minecraft:wheat",
+        "data": 0
+      },
+      {
+        "item": "minecraft:wheat",
+        "data": 0
+      }
+    ],
+    "result": {
+      "item": "karasichek:raw_bread",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:block": {
+    "description": {
+      "identifier": "karasichek:grape_log",
+      "menu_category": {
+        "category": "nature",
+        "group": "pa:itemGroup.name.§dvinery"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2.0
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 2.0
+      },
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": {
+        "catch_chance_modifier": 5,
+        "destroy_chance_modifier": 20
+      },
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 4,
+      "minecraft:loot": "loot_tables/blocks/karasichek_grape_log.json",
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": true,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "karasichek_grape_log_side",
+          "render_method": "opaque"
+        },
+        "up": {
+          "texture": "karasichek_grape_log_up",
+          "render_method": "opaque"
+        },
+        "down": {
+          "texture": "karasichek_grape_log_down",
+          "render_method": "opaque"
+        }
+      },
+      "tag:wood": {},
+      "minecraft:movable": {
+        "movement_type": "push_pull",
+        "sticky": "none"
+      },
+      "minecraft:geometry": "minecraft:geometry.full_block"
+    },
+    "events": {}
+  }
+}

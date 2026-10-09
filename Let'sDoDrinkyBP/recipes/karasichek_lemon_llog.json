@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "lemon_llog_090554fc"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "   ",
+      "AA ",
+      "AA "
+    ],
+    "key": {
+      "A": {
+        "item": "karasichek:lemon_log",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "karasichek:lemon_llog",
+      "count": 1
+    }
+  }
+}

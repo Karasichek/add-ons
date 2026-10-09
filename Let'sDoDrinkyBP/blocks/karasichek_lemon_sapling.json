@@ -1,0 +1,69 @@
+{
+"format_version": "1.21.120",
+"minecraft:block": {
+"description": {
+"identifier": "karasichek:lemon_sapling",
+"menu_category": {
+"category": "none"
+}
+},
+"components": {
+"minecraft:flammable": {
+"catch_chance_modifier": 5,
+"destroy_chance_modifier": 20
+},
+"minecraft:collision_box": false,
+"minecraft:light_dampening": 0,
+"minecraft:destructible_by_mining": 0.1,
+"minecraft:destructible_by_explosion": 0.1,
+"minecraft:geometry": "geometry.custom_sapling",
+"minecraft:loot": "loot_tables/blocks/karasichek_lemon_sapling.json",
+"minecraft:map_color": "#5D7436",
+"minecraft:material_instances": {
+"*": {
+"texture": "karasichek_lemon_sapling",
+"render_method": "alpha_test"
+}
+},
+"minecraft:placement_filter": {
+"conditions": [
+{
+"block_filter": [
+"farmland",
+"dirt",
+"grass_block",
+"grass_path"
+],
+"allowed_faces": [
+"up",
+"down"
+]
+}
+]
+},
+"minecraft:friction": 0.4,
+"minecraft:light_emission": 10,
+"minecraft:flower_pottable": {},
+"minecraft:selection_box": true,
+"minecraft:liquid_detection": {
+"detection_rules": [
+{
+"can_contain_liquid": false,
+"on_liquid_touches": "popped",
+"use_liquid_clipping": false
+}
+]
+},
+"minecraft:tick": {
+"looping": true,
+"interval_range": [
+10,
+10
+]
+},
+"karasichek_lemon_sapling:trigger": {}
+},
+"permutations": [],
+"events": {}
+}
+}

@@ -1,0 +1,71 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Adds a tons of tea, coffee, ana fun! by Karasichek",
+    "name": "Let's §cDo §aDrinky! §f[0.6.6]",
+    "uuid": "dc7b2887-ae01-4a66-bcca-cc8ab65a138e",
+    "version": [
+      0,
+      6,
+      6
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      20
+    ]
+  },
+  "modules": [
+    {
+      "description": "Adds a tons of tea, coffee, ana fun! by Karasichek",
+      "type": "data",
+      "uuid": "26df6f92-940a-4678-bfc6-8b0637dbdd3e",
+      "version": [
+        0,
+        6,
+        6
+      ]
+    },
+    {
+      "type": "script",
+      "uuid": "c8107b9f-b8f9-46c8-bd4e-930c3b710ca0",
+      "version": [
+        0,
+        6,
+        6
+      ],
+      "entry": "scripts/main.js",
+      "language": "javascript"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "1fa9763c-9524-489f-873c-c2a4a8e0db4a",
+      "version": [
+        0,
+        6,
+        6
+      ]
+    },
+    {
+      "version": "2.7.0",
+      "module_name": "@minecraft/server"
+    },
+    {
+      "version": "2.0.0",
+      "module_name": "@minecraft/server-ui"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Karasichek"
+    ],
+    "generated_with": {
+      "MAM": [
+        "3.9.4"
+      ]
+    },
+    "product_type": "addon",
+    "url": "https://addonsmaker.com/"
+  }
+}
