@@ -62,6 +62,9 @@
       "textures": [
         "textures/blocks/grape_bush/karasichek_growed_red"
       ]
+    },
+    "karasichek_pressing_tub": {
+      "textures": "textures/blocks/karasichek_pressing_tub"
     }
   }
 }

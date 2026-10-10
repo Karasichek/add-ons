@@ -1,0 +1,342 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:block": {
+    "description": {
+      "identifier": "karasichek:pressing_tub",
+      "menu_category": {
+        "category": "equipment",
+        "group": "pa:itemGroup.name.§dvinery"
+      },
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": [
+            "minecraft:block_face"
+          ]
+        },
+        "minecraft:placement_direction": {
+          "enabled_states": [
+            "minecraft:cardinal_direction"
+          ],
+          "y_rotation_offset": 180.0
+        }
+      }
+    },
+    "components": {
+      "minecraft:geometry": "geometry.karasichek_pressing_tub",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "karasichek_pressing_tub",
+          "render_method": "alpha_test",
+          "ambient_occlusion": 0.0,
+          "face_dimming": true
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": "geometry.karasichek_pressing_tub",
+        "material_instances": {
+          "*": {
+            "texture": "karasichek_pressing_tub",
+            "render_method": "alpha_test",
+            "ambient_occlusion": 0.0,
+            "face_dimming": true
+          }
+        }
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [
+            -8,
+            0,
+            -8
+          ],
+          "size": [
+            16,
+            8,
+            8
+          ]
+        },
+        {
+          "origin": [
+            -8,
+            4,
+            -4
+          ],
+          "size": [
+            16,
+            8,
+            8
+          ]
+        },
+        {
+          "origin": [
+            -8,
+            8,
+            0
+          ],
+          "size": [
+            16,
+            8,
+            8
+          ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [
+          -8,
+          0,
+          -8
+        ],
+        "size": [
+          16,
+          10,
+          16
+        ]
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3600000
+      },
+      "minecraft:movable": {
+        "movement_type": "immovable"
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "none"
+      },
+      "minecraft:connection_rule": {
+        "accepts_connections_from": "none"
+      },
+      "minecraft:display_name": "%tile.karasichek:pressing_tub.name",
+      "minecraft:destruction_particles": {
+        "texture": "karasichek_pressing_tub",
+        "particle_count": 24,
+        "tint_method": "none"
+      },
+      "minecraft:map_color": "#745633",
+      "minecraft:loot": "loot_tables/blocks/karasichek_pressing_tub.json"
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down'",
+        "components": {
+          "minecraft:collision_box": [
+            {
+              "origin": [
+                -8,
+                0,
+                -8
+              ],
+              "size": [
+                16,
+                4,
+                16
+              ]
+            },
+            {
+              "origin": [
+                -8,
+                4,
+                -8
+              ],
+              "size": [
+                2,
+                4,
+                16
+              ]
+            },
+            {
+              "origin": [
+                6,
+                4,
+                -8
+              ],
+              "size": [
+                2,
+                4,
+                16
+              ]
+            },
+            {
+              "origin": [
+                -6,
+                4,
+                -8
+              ],
+              "size": [
+                12,
+                4,
+                2
+              ]
+            },
+            {
+              "origin": [
+                -6,
+                4,
+                6
+              ],
+              "size": [
+                12,
+                4,
+                2
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'north'",
+        "components": {
+          "minecraft:geometry": "geometry.karasichek_pressing_tub_tilt",
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          },
+          "minecraft:selection_box": {
+            "origin": [
+              -8,
+              0,
+              -5
+            ],
+            "size": [
+              16,
+              16,
+              10
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'east'",
+        "components": {
+          "minecraft:geometry": "geometry.karasichek_pressing_tub_tilt",
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              -90,
+              0
+            ]
+          },
+          "minecraft:selection_box": {
+            "origin": [
+              -5,
+              0,
+              -8
+            ],
+            "size": [
+              10,
+              16,
+              16
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'south'",
+        "components": {
+          "minecraft:geometry": "geometry.karasichek_pressing_tub_tilt",
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              -180,
+              0
+            ]
+          },
+          "minecraft:selection_box": {
+            "origin": [
+              -8,
+              0,
+              -5
+            ],
+            "size": [
+              16,
+              16,
+              10
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('minecraft:block_face') == 'west'",
+        "components": {
+          "minecraft:geometry": "geometry.karasichek_pressing_tub_tilt",
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              -270,
+              0
+            ]
+          },
+          "minecraft:selection_box": {
+            "origin": [
+              -5,
+              0,
+              -8
+            ],
+            "size": [
+              10,
+              16,
+              16
+            ]
+          }
+        }
+      },
+      {
+        "condition": "(q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down') && q.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": {
+          "minecraft:geometry": "geometry.karasichek_pressing_tub",
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "(q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down') && q.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:geometry": "geometry.karasichek_pressing_tub",
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              -90,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "(q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down') && q.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:geometry": "geometry.karasichek_pressing_tub",
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              -180,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "condition": "(q.block_state('minecraft:block_face') == 'up' || q.block_state('minecraft:block_face') == 'down') && q.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:geometry": "geometry.karasichek_pressing_tub",
+          "minecraft:transformation": {
+            "rotation": [
+              0,
+              -270,
+              0
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

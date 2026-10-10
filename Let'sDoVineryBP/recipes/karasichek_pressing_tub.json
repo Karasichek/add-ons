@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "karasichek:pressing_tub"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "result": {
+      "item": "karasichek:pressing_tub",
+      "count": 2
+    },
+    "ingredients": [
+      {
+        "item": "minecraft:barrel"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "minecraft:barrel"
+      }
+    ]
+  }
+}
