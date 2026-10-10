@@ -8,7 +8,7 @@ const INPUTS = Object.freeze({
     "karasichek:grape": { color: "white", juice: "karasichek:grapejuice_white" },
     "karasichek:grape_red": { color: "red", juice: "karasichek:grapejuice_red" }
 });
-const PRESS_MILLIBUCKETS = 125;
+const PRESS_MILLIBUCKETS = 50;
 const CAPACITY = 1000;
 const SLOT_LIMIT = 64;
 const EMPTY_VESSEL = "karasichek:bocal_empty";
