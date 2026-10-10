@@ -29,3 +29,7 @@ item.karasichek:white_vine_bocal=§aWhite Vine§f Bocal
 pa:itemGroup.name.§dvinery=§dVinery
 tile.karasichek:pressing_tub.name=§6Grape Press
 tile.karasichek:pressing_tub=§6Grape Press
+item.karasichek:grapejuice_white.name=White Grape Juice
+item.karasichek:grapejuice_white=White Grape Juice
+item.karasichek:grapejuice_red.name=Red Grape Juice
+item.karasichek:grapejuice_red=Red Grape Juice

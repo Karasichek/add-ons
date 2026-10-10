@@ -1,5 +1,6 @@
 // Основная логика культур и взаимодействий аддона Let'sDoVinery.
 import { system, BlockPermutation, world } from "@minecraft/server";
+import { registerPressingTubComponent } from "./pressing_tub.js";
 import {
     safeRead,
     safely,
@@ -134,6 +135,9 @@ try {
 system.beforeEvents.startup.subscribe(event => safely("startup", event, () => {
     const blockComponentRegistry = event?.blockComponentRegistry;
     if (!blockComponentRegistry) throw new Error("blockComponentRegistry is unavailable at startup");
+
+    try { registerPressingTubComponent(blockComponentRegistry); }
+    catch (error) { logError("pressing-tub:register", event, error); }
 
     for (const color of VARIANTS) {
         const stage1 = `karasichek:grape_crop_${color}_stage1`;

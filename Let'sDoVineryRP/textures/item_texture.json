@@ -28,6 +28,15 @@
     },
     "karasichek:white_vine_bocal": {
       "textures": "textures/items/pamobile/karasichek_white_vine_bocal"
+    },
+    "karasichek:grapejuice_white": {
+      "textures": "textures/items/pamobile/karasichek_grapejuice_white"
+    },
+    "karasichek:grapejuice_red": {
+      "textures": "textures/items/pamobile/karasichek_grapejuice_red"
+    },
+    "karasichek:pressing_tub": {
+      "textures": "textures/items/pamobile/karasichek_pressing_tub"
     }
   }
 }

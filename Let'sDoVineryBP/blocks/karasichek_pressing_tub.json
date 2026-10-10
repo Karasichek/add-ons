@@ -115,7 +115,26 @@
         "tint_method": "none"
       },
       "minecraft:map_color": "#745633",
-      "minecraft:loot": "loot_tables/blocks/karasichek_pressing_tub.json"
+      "minecraft:loot": "loot_tables/blocks/karasichek_pressing_tub.json",
+      "minecraft:entity_fall_on": {
+        "min_fall_distance": 0.5
+      },
+      "minecraft:tick": {
+        "interval_range": [
+          100,
+          100
+        ],
+        "looping": true
+      },
+      "karasichek:pressing_tub": {},
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "liquid_type": "water",
+            "can_contain_liquid": true
+          }
+        ]
+      }
     },
     "permutations": [
       {

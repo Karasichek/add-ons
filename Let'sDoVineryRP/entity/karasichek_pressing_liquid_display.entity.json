@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "karasichek:pressing_liquid_display",
+      "materials": {
+        "default": "breeze_wind"
+      },
+      "textures": {
+        "white": "textures/blocks/karasichek_grapejuice_white_surface",
+        "red": "textures/blocks/karasichek_grapejuice_red_surface"
+      },
+      "geometry": {
+        "default": "geometry.karasichek_runtime.pressing_liquid"
+      },
+      "animations": {
+        "level": "animation.karasichek_runtime.pressing_liquid"
+      },
+      "scripts": {
+        "animate": [
+          "level"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.karasichek.pressing_liquid"
+      ]
+    }
+  }
+}
