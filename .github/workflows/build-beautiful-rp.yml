@@ -2,7 +2,7 @@ name: Build Let's Do Beautiful resource pack
 
 on:
   push:
-    branches: [main]
+    branches: ['**']
     tags:
       - 'v*'
   workflow_dispatch:
